@@ -14,7 +14,7 @@ use diesel::pg::PgConnection;
 mod models;
 mod schema;
 
-fn main(){
+fn main() {
     dotenv().ok(); // Because LAZY ERROR HANDLER
 
     let database_url = env::var("DATABASE_URL").expect("set DATABASE_URL");
@@ -26,4 +26,9 @@ fn main(){
         published: true,
     };
 
+    if models::Book::insert(book, &conn) {
+        println!("Success");
+    } else {
+        println!("FAILURE");
+    }
 }
