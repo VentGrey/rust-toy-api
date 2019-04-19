@@ -12,5 +12,5 @@ mod models;
 mod schema;
 
 fn main(){
-    println!("Hello mundo");
+    dotenv().ok(); // Because LAZY ERROR HANDLER
 }
