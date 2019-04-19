@@ -22,7 +22,7 @@ version = "0.1.0"
 dependencies = [
  "diesel 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "diesel_codegen 0.16.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "dotenv 0.13.0 (git+https://github.com/apiraino/rust-dotenv)",
+ "dotenv 0.13.0 (git+https://github.com/greyblake/rust-dotenv)",
 ]
 
 [[package]]
@@ -152,7 +152,7 @@ dependencies = [
 [[package]]
 name = "dotenv"
 version = "0.13.0"
-source = "git+https://github.com/apiraino/rust-dotenv#70e9ef8aa507a2e34c94a7386924339fa1667e33"
+source = "git+https://github.com/greyblake/rust-dotenv#aea3bc3f1f09be9e97e479907999f686bb5c021f"
 dependencies = [
  "failure 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -420,7 +420,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum diesel_derives 1.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "62a27666098617d52c487a41f70de23d44a1dc1f3aa5877ceba2790fb1f1cab4"
 "checksum diesel_infer_schema 0.16.0 (registry+https://github.com/rust-lang/crates.io-index)" = "bf1957ff5cd3b04772e43c162c2f69c2aa918080ff9b020276792d236be8be52"
 "checksum dotenv 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)" = "d6f0e2bb24d163428d8031d3ebd2d2bd903ad933205a97d0f18c7c1aade380f3"
-"checksum dotenv 0.13.0 (git+https://github.com/apiraino/rust-dotenv)" = "<none>"
+"checksum dotenv 0.13.0 (git+https://github.com/greyblake/rust-dotenv)" = "<none>"
 "checksum error-chain 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d9435d864e017c3c6afeac1654189b06cdb491cf2ff73dbf0d73b0f292f42ff8"
 "checksum failure 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "795bd83d3abeb9220f257e597aa0080a508b27533824adf336529648f6abf7e2"
 "checksum failure_derive 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "ea1063915fd7ef4309e222a5a07cf9c319fb9c7836b1f89b85458672dbb127e1"
