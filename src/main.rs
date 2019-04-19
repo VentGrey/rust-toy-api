@@ -20,5 +20,10 @@ fn main(){
     let database_url = env::var("DATABASE_URL").expect("set DATABASE_URL");
     let conn = PgConnection::establish(&database_url).unwrap();
 
+    let book = models::NewBook {
+        title: String::from("The Necronomicon"),
+        author: String::from("Howard Phillips Lovecraft"),
+        published: true,
+    };
 
 }
