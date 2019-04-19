@@ -8,8 +8,8 @@ extern crate dotenv;
 use dotenv::dotenv;
 use std::env;
 
-mod schema;
 mod models;
+mod schema;
 
 fn main(){
     println!("Hello mundo");
