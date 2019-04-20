@@ -42,6 +42,7 @@ fn rocket() -> rocket::Rocket {
             routes![index, new, show, delete, author, update],
         )
         .mount("/", routes![static_files::all, static_files::index])
+        .catch(catchers![not_found])
 
 }
 
