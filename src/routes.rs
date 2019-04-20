@@ -31,3 +31,17 @@ fn show(conn: DbConn, id: i32) -> Json<value> {
         "result": result.get(0),
     }))
 }
+
+#[put("/books/<id>", format = "application/json", data = "<book>")]
+fn update(conn: Dbconn, id: i32, book: Json<NewBook>) -> Json<Value> {
+    let status = if Book::update_by_id(id, &conn, book.into_inner()) {
+        200
+    } else {
+        404
+    };
+
+    Json(json!({
+        "status": status,
+        "result": null,
+    }))
+}
