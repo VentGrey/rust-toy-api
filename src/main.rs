@@ -27,21 +27,13 @@ use diesel::pg::PgConnection;
 mod models;
 mod schema;
 
-fn main() {
-    dotenv().ok(); // Because LAZY ERROR HANDLER
+fn rocket() -> rocket::Rocket {
+    dotenv().ok();
 
     let database_url = env::var("DATABASE_URL").expect("set DATABASE_URL");
-    let conn = PgConnection::establish(&database_url).unwrap();
+    let pool = db::init_pool(database_url);
+    rocket::ignite()
 
-    let book = models::NewBook {
-        title: String::from("The Necronomicon"),
-        author: String::from("Howard Phillips Lovecraft"),
-        published: true,
-    };
-
-    if models::Book::insert(book, &conn) {
-        println!("Success");
-    } else {
-        println!("FAILURE");
-    }
 }
+
+fn main() {}
