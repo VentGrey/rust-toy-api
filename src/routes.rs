@@ -45,3 +45,26 @@ fn update(conn: Dbconn, id: i32, book: Json<NewBook>) -> Json<Value> {
         "result": null,
     }))
 }
+
+#[delete("/books/<id>")]
+fn delete(id: i32, conn: DbConn) -> Json<Value> {
+        let status = if Book::update_by_id(id, &conn, book.into_inner()) {
+        200
+    } else {
+        404
+    };
+
+    Json(json!({
+        "status": status,
+        "result": null,
+    }))
+}
+
+#[get("/books/authors/<author>", format = "application/json")]
+fn author(author: String, conn: DbConn) -> Json<Value> {
+    Json(json!({
+        "status": "200",
+        "result": Book::all_by_author(author, & conn),
+    }))
+
+}
