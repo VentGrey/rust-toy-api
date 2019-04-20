@@ -20,3 +20,14 @@ fn new(conn: DbConn, new_book: Json<NewBook>) -> Json<Value> {
         "result": Book::all(&conn).first(),
     }))
 }
+
+#[get("/books/<id>", format = "application/json")]
+fn show(conn: DbConn, id: i32) -> Json<value> {
+    let result = Book::show(id, &conn);
+    let status = if result.is_empty() { 404 } else { 200 }
+
+    Json(json!({
+        "status": status,
+        "result": result.get(0),
+    }))
+}
