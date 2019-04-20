@@ -41,4 +41,6 @@ fn rocket() -> rocket::Rocket {
 
 }
 
-fn main() {}
+fn main() {
+    rocket().launch();
+}
