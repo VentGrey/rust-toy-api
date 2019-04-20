@@ -13,7 +13,6 @@ pub struct Book {
     pub published: bool,
 }
 
-
 #[derive(Serialize, Deserialize, Insertable)]
 #[table_name = "books"]
 pub struct NewBook {
@@ -23,7 +22,7 @@ pub struct NewBook {
 }
 
 impl Book {
-    pub fn show(id: i32, conn: &PgConnection) -> {
+    pub fn show(id: i32, conn: &PgConnection) -> Vec<Book> {
         all_books
             .find(id)
             .load::<Book>(conn)
@@ -34,7 +33,7 @@ impl Book {
         all_books
             .order(books::id.desc())
             .load::<Book>(conn)
-            .expect("Error loading book")
+            .expect("error loading the books")
     }
 
     pub fn update_by_id(id: i32, conn: &PgConnection, book: NewBook) -> bool {
@@ -69,6 +68,6 @@ impl Book {
         all_books
             .filter(books::author.eq(author))
             .load::<Book>(conn)
-            .expect("Error loading books")
+            .expect("Error loading books by author")
     }
 }
