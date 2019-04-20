@@ -68,3 +68,11 @@ fn author(author: String, conn: DbConn) -> Json<Value> {
     }))
 
 }
+
+#[catch(404)]
+fn not_found() - Json<Value> {
+    Json(json!({
+        "status": "error",
+        "reason": "resource temporarily unavailable"
+    }))
+}
