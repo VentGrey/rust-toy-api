@@ -12,3 +12,11 @@ fn index(conn: DbConn) -> Json<Value> {
         "result": books,
     }))
 }
+
+#[post("/books", format = "application/json", data = "<new_book>")]
+fn new(conn: DbConn, new_book: Json<NewBook>) -> Json<Value> {
+    Json(json!({
+        "status": Book::insert(new_book.into_inner(), &conn),
+        "result": Book::all(&conn).first(),
+    }))
+}
