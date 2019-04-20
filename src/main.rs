@@ -26,6 +26,9 @@ use diesel::pg::PgConnection;
 
 mod models;
 mod schema;
+mod db;
+mod static_files;
+
 
 fn rocket() -> rocket::Rocket {
     dotenv().ok();
@@ -33,6 +36,8 @@ fn rocket() -> rocket::Rocket {
     let database_url = env::var("DATABASE_URL").expect("set DATABASE_URL");
     let pool = db::init_pool(database_url);
     rocket::ignite()
+        .manage(pool)
+        .mount("/", routes![static_files::all, static_files::index])
 
 }
 
