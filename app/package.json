@@ -2,9 +2,11 @@
   "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "brunch-config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "brunch build && cd .. && cargo run",
+    "deploy": "brunch build --production",
+    "watch": "brunch watch --stdin"
   },
   "author": "",
   "license": "ISC",

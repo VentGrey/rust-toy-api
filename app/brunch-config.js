@@ -15,5 +15,21 @@ exports.config = {
             "static", "css", "js", "vendor", "elm"
         ],
         public: "../public"
+    },
+    plugins: {
+        babel: {
+
+            ignore: [/vendor/]
+        },
+        elmBrunch: {
+            elmFolder: "elm",
+            mainModules: ["main.elm"],
+            outputFolder: "../js"
+        }
+    },
+    modules: {
+        autoRequire: {
+            "js/app.js": ["js/app"]
+        }
     }
 }
