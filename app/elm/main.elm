@@ -35,3 +35,15 @@ update msg model =
                 ( Debug.log (toString e) model, Cmd.none )
             RequestBooks ->
                 (model, getBooks)
+
+
+getBooks : Cmd Msg
+getBooks =
+    let
+        url =
+            "http://localhost:8000/api/v1/books"
+
+        req =
+            Http.get url decodeBooks
+    in
+        Http.send GetBooks req
