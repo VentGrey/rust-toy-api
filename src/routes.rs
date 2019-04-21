@@ -27,7 +27,7 @@ pub fn show(conn: DbConn, id: i32) -> Json<Value> {
     let status = if result.is_empty() { 404 } else { 200 };
 
     Json(json!({
-        "status": status,
+        "status": status, 
         "result": result.get(0),
     }))
 }
