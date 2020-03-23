@@ -5,7 +5,7 @@ authors = ["VentGrey <omarpurataf@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-diesel = { version = "1.4.3", features = ["postgres"] }
+diesel = { version = "1.4.4", features = ["postgres"] }
 dotenv = { git = "https://github.com/apiraino/rust-dotenv.git" }
 r2d2 = "0.8.2"
 r2d2-diesel = "1.0.0"
