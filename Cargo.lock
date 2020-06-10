@@ -12,7 +12,7 @@ dependencies = [
 name = "api"
 version = "0.1.0"
 dependencies = [
- "diesel 1.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "diesel 1.4.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "dotenv 0.13.0 (git+https://github.com/apiraino/rust-dotenv.git)",
  "r2d2 0.8.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "r2d2-diesel 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -153,7 +153,7 @@ dependencies = [
 
 [[package]]
 name = "diesel"
-version = "1.4.3"
+version = "1.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "bitflags 1.0.4 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -578,7 +578,7 @@ name = "r2d2-diesel"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "diesel 1.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "diesel 1.4.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "r2d2 0.8.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -998,7 +998,7 @@ source = "git+https://github.com/SergioBenitez/Rocket.git?rev=ad0ba0d#ad0ba0d5f1
 "checksum devise 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "74e04ba2d03c5fa0d954c061fc8c9c288badadffc272ebb87679a89846de3ed3"
 "checksum devise_codegen 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "066ceb7928ca93a9bedc6d0e612a8a0424048b0ab1f75971b203d01420c055d7"
 "checksum devise_core 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cf41c59b22b5e3ec0ea55c7847e5f358d340f3a8d6d53a5cf4f1564967f96487"
-"checksum diesel 1.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "9d7cc03b910de9935007861dce440881f69102aaaedfd4bc5a6f40340ca5840c"
+"checksum diesel 1.4.5 (registry+https://github.com/rust-lang/crates.io-index)" = "3e2de9deab977a153492a1468d1b1c0662c1cf39e5ea87d0c060ecd59ef18d8c"
 "checksum diesel_derives 1.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "62a27666098617d52c487a41f70de23d44a1dc1f3aa5877ceba2790fb1f1cab4"
 "checksum dotenv 0.13.0 (git+https://github.com/apiraino/rust-dotenv.git)" = "<none>"
 "checksum failure 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "795bd83d3abeb9220f257e597aa0080a508b27533824adf336529648f6abf7e2"
