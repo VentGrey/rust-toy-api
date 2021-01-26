@@ -9,7 +9,7 @@ diesel = { version = "1.4.3", features = ["postgres"] }
 dotenv = { git = "https://github.com/apiraino/rust-dotenv.git" }
 r2d2 = "0.8.2"
 r2d2-diesel = "1.0.0"
-serde = "1.0.80"
+serde = "1.0.123"
 serde_derive  = "1.0.104"
 serde_json = "1.0.48"
 
